@@ -1,7 +1,7 @@
 import logo from '../images/logo.svg'
+import { pageLinks, socialLinks } from '../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook ,faTwitter,faSquarespace} from '@fortawesome/free-brands-svg-icons'
 
 const Navbar = () => {
   return (
@@ -17,41 +17,28 @@ const Navbar = () => {
           </div>
 
           <ul className='nav-links'  id='nav-links'>
-            <li>
-              <a href="#home" className='nav-link'>home</a>
-            </li>
-
-            <li>
-              <a href="#about" className='nav-link'>about</a>
-            </li>
-
-            <li>
-              <a href="#services" className='nav-link'>services</a>
-            </li>
-
-            <li>
-              <a href="#tours" className='nav-link'>tours</a>
-            </li>
+            {
+              pageLinks.map((link)=>(
+                <li key={link.id}>
+                  <a href={link.href} className='nav-link' rel='noreferrer'>
+                    {link.text}
+                  </a>
+                </li>
+              ))
+            }
           </ul>
 
           <ul className='nav-icons'>
-            <li>
-              <a href="https://www.twitter.com" target='_blank' className='nav-icon'>
-                <FontAwesomeIcon icon={faFacebook}/>
-              </a>
-            </li>
 
-            <li>
-              <a href="https://www.facebook.com" className='nav-icon'>
-                <FontAwesomeIcon icon={faTwitter}/>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.twitter.com" className='nav-icon'>
-                <FontAwesomeIcon icon={faSquarespace}/>
-              </a>
-            </li>
+            {
+              socialLinks.map((link)=>(
+                <li key={link.id}>
+                  <a href={link.href} target='_blank' className='nav-icon'>
+                    <FontAwesomeIcon icon={link.icon}/>
+                  </a>
+                </li>
+              ))
+            }
           </ul>
 
         </div>

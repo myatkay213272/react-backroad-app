@@ -4,8 +4,8 @@ import { faFacebook ,faTwitter,faSquarespace} from '@fortawesome/free-brands-svg
 const Footer = () => {
   return (
 
-    <footer>
-        <ul>
+    <footer className='section footer'>
+        <ul className='footer-links'>
           <li>
               <a href="#home" className='footer-link'>home</a>
           </li>
@@ -25,19 +25,19 @@ const Footer = () => {
 
         <ul className='footer-icons'>
             <li>
-              <a href="https://www.twitter.com" target='_blank' className='nav-icon'>
+              <a href="https://www.twitter.com" target='_blank' className='footer-icon'>
                 <FontAwesomeIcon icon={faFacebook}/>
               </a>
             </li>
 
             <li>
-              <a href="https://www.facebook.com" className='nav-icon'>
+              <a href="https://www.facebook.com" target='_blank' className='footer-icon'>
                 <FontAwesomeIcon icon={faTwitter}/>
               </a>
             </li>
 
             <li>
-              <a href="https://www.twitter.com" className='nav-icon'>
+              <a href="https://www.twitter.com"target='_blank' className='footer-icon'>
                 <FontAwesomeIcon icon={faSquarespace}/>
               </a>
             </li>
