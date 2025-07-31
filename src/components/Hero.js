@@ -3,7 +3,7 @@ const Hero = () => {
   return (
      <section className='hero' id='home'>
         <div className="hero-banner">
-          <h1>continue exploring</h1>
+          <h1>backroads app</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Corrupti iusto sit minus ipsa, impedit in ut incidunt praesentium? Eius, harum.
           </p>

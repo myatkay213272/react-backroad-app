@@ -1,50 +1,37 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook ,faTwitter,faSquarespace} from '@fortawesome/free-brands-svg-icons'
+import { socialLinks } from '../data';
+import PageLinks from './PageLinks';
 
 const Footer = () => {
   return (
 
     <footer className='section footer'>
-        <ul className='footer-links'>
-          <li>
-              <a href="#home" className='footer-link'>home</a>
-          </li>
-
-           <li>
-              <a href="#about" className='footer-link'>about</a>
-          </li>
-
-           <li>
-              <a href="#services" className='footer-link'>services</a>
-          </li>
-
-           <li>
-              <a href="#featured" className='footer-link'>featured</a>
-          </li>
-        </ul>
+      <PageLinks parentClass='footer-links' itemClass='footer-link'/>
 
         <ul className='footer-icons'>
-            <li>
-              <a href="https://www.twitter.com" target='_blank' className='footer-icon'>
-                <FontAwesomeIcon icon={faFacebook}/>
-              </a>
-            </li>
 
-            <li>
-              <a href="https://www.facebook.com" target='_blank' className='footer-icon'>
-                <FontAwesomeIcon icon={faTwitter}/>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.twitter.com"target='_blank' className='footer-icon'>
-                <FontAwesomeIcon icon={faSquarespace}/>
-              </a>
-            </li>
+          {
+            socialLinks.map((link)=>{
+              const {id,href,icon} = link
+              return(
+                <li key={id}>
+                  <a 
+                    href={href} 
+                    target='_blank' 
+                    className='footer-icon'
+                    rel='noreferrer'
+                  >
+                    <FontAwesomeIcon icon={icon}/>
+                  </a>
+                </li>
+              )
+            })
+          }            
           </ul>
+
         <p class="copyright">
         copyright &copy; Backroads travel tours company
-        <span id="date"></span> all rights reserved
+        <span id="date">{new Date().getFullYear()}</span> all rights reserved
         </p>
 
       </footer>

@@ -1,12 +1,14 @@
 import logo from '../images/logo.svg'
-import { pageLinks, socialLinks } from '../data';
+import { socialLinks } from '../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import PageLinks from './PageLinks';
 
 const Navbar = () => {
   return (
 
-    <nav className='navbar'>
+    <nav className='navbar'> 
+    {/*  style={{position:'fixed' ,background:'white',width:'100%', boxShadow: '0 5px 15px rgba(0, 0, 0, 0.2)',zIndex:'999'}}> */}
         <div className='nav-center'>
 
           <div className='nav-header'>
@@ -16,28 +18,21 @@ const Navbar = () => {
             </button>
           </div>
 
-          <ul className='nav-links'  id='nav-links'>
-            {
-              pageLinks.map((link)=>(
-                <li key={link.id}>
-                  <a href={link.href} className='nav-link' rel='noreferrer'>
-                    {link.text}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+          <PageLinks parentClass='nav-links' itemClass='nav-link'/>
 
           <ul className='nav-icons'>
 
             {
-              socialLinks.map((link)=>(
-                <li key={link.id}>
-                  <a href={link.href} target='_blank' className='nav-icon'>
-                    <FontAwesomeIcon icon={link.icon}/>
-                  </a>
-                </li>
-              ))
+              socialLinks.map((link)=>{
+                const {id,href,icon} = link
+                return(
+                  <li key={id}>
+                    <a href={href} target='_blank' rel='noreferrer' className='nav-icon'>
+                      <FontAwesomeIcon icon={icon}/>
+                    </a>
+                  </li>
+                )
+              })
             }
           </ul>
 
