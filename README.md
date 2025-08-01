@@ -17,21 +17,21 @@ Built for **mobile-first** and fully responsive on all screen sizes.
 
 ### 🖥️ Desktop View
 
-![Desktop Screenshot](./backroad1.png)
-![Desktop Screenshot](./backroad2.png)
-![Desktop Screenshot](./backroad3.png)
-![Desktop Screenshot](./backroad4.png)
-![Desktop Screenshot](./backroad5.png)
+![Desktop Screenshot](./screenshots/backroad1.png)
+![Desktop Screenshot](./screenshots/backroad2.png)
+![Desktop Screenshot](./screenshots/backroad3.png)
+![Desktop Screenshot](./screenshots/backroad4.png)
+![Desktop Screenshot](./screenshots/backroad5.png)
 
 
 ### 📱 Mobile View
 
-![Mobile Screenshot](./backroad6.png)
-![Mobile Screenshot](./backroad7.png)
-![Mobile Screenshot](./backroad8.png)
-![Mobile Screenshot](./backroad9.png)
-![Mobile Screenshot](./backroad10.png)
-![Mobile Screenshot](./backroad11.png)
+![Mobile Screenshot](./screenshots/backroad6.png)
+![Mobile Screenshot](./screenshots/backroad7.png)
+![Mobile Screenshot](./screenshots/backroad8.png)
+![Mobile Screenshot](./screenshots/backroad9.png)
+![Mobile Screenshot](./screenshots/backroad10.png)
+![Mobile Screenshot](./screenshots/backroad11.png)
 
 
 
