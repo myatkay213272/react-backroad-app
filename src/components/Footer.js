@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { socialLinks } from '../data';
 import PageLinks from './PageLinks';
+import SocialLink from './SocialLink';
 
 const Footer = () => {
   return (
@@ -12,18 +12,8 @@ const Footer = () => {
 
           {
             socialLinks.map((link)=>{
-              const {id,href,icon} = link
               return(
-                <li key={id}>
-                  <a 
-                    href={href} 
-                    target='_blank' 
-                    className='footer-icon'
-                    rel='noreferrer'
-                  >
-                    <FontAwesomeIcon icon={icon}/>
-                  </a>
-                </li>
+                <SocialLink key={link.id} {...link} itemClass='footer-icon'/>
               )
             })
           }            

@@ -1,20 +1,13 @@
 import { pageLinks } from "../data"
+import PageLink from "./PageLink"
 
 const PageLinks = ({parentClass,itemClass}) => {
   return (
     <ul className={parentClass}  id='nav-links'>
         {
-            pageLinks.map((link)=>(
-            <li key={link.id}>
-                <a 
-                href={link.href} 
-                className={itemClass}
-                rel='noreferrer'
-                >
-                {link.text}
-                </a>
-            </li>
-            ))
+          pageLinks.map((link)=>(
+           <PageLink key={link.id} link={link} itemClass={itemClass}/>
+          ))
         }
     </ul>
   )

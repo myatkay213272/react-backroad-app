@@ -3,6 +3,7 @@ import { socialLinks } from '../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import PageLinks from './PageLinks';
+import SocialLink from './SocialLink';
 
 const Navbar = () => {
   return (
@@ -24,13 +25,8 @@ const Navbar = () => {
 
             {
               socialLinks.map((link)=>{
-                const {id,href,icon} = link
                 return(
-                  <li key={id}>
-                    <a href={href} target='_blank' rel='noreferrer' className='nav-icon'>
-                      <FontAwesomeIcon icon={icon}/>
-                    </a>
-                  </li>
+                 <SocialLink key={link.id} {...link} itemClass='nav-icon'/>
                 )
               })
             }
